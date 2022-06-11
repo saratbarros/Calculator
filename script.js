@@ -80,11 +80,6 @@ numbers.forEach( number => {
     } else if (e.target.innerText === '.' && haveDot){
       return; //if dot has been previously clicked then do not allow it to be clicked
     }
-    if(e.target.innerText === '0' && !num0){
-      num0 = true; //if 0 has not been previously clicked then allow it to be clicked
-    } else if (e.target.innerText === '0' && num0){
-      return; //if 0 has been previously clicked then do not allow it to be clicked
-    }    
     outputDisplay += e.target.innerText;
     resDisplay.innerText = outputDisplay;
   })
