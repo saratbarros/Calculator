@@ -17,18 +17,16 @@ let haveDot = false;
 
 // Arrow Functions //  
 const mathOperation = () => {
-  subDisplay = parseFloat(subDisplay); //turns a string into a number
   outputDisplay = parseFloat(outputDisplay);
-  if (typeof lastOperation === 'string') {
     switch (lastOperation) {
       case '+':
-        result = subDisplay + outputDisplay;
+        result = result + outputDisplay;
         break;
       case '-':
-        result = subDisplay - outputDisplay;
+        result = result - outputDisplay;
         break;
       case '*':
-        result = subDisplay * outputDisplay;
+        result = result * outputDisplay;
         break;
       case '/':
       if (outputDisplay === 0) {
@@ -36,9 +34,8 @@ const mathOperation = () => {
         outputDisplay = '';
         result = 'Nice try!';
       } else {
-        result = subDisplay / outputDisplay;
+        result = result / outputDisplay;
       }
-    }
   }            
 }
 
@@ -114,8 +111,8 @@ equal.addEventListener('click', (e)=> {
 });
 
 clearAll.addEventListener('click', (e)=>{
-  hisDisplay.innerText ='0';
-  resDisplay.innerText ='0';
+  hisDisplay.innerText ='';
+  resDisplay.innerText ='';
   tempResult.innerText = '';
   subDisplay = '';
   outputDisplay = '';
